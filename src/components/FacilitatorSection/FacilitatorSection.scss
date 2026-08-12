@@ -1,0 +1,142 @@
+.facilitator-section {
+	display: grid;
+	place-items: center;
+	padding: 72px 24px 70px;
+	background-color: var(--color-cream);
+	background-image:
+		linear-gradient(var(--color-pattern) 1px, transparent 1px),
+		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
+	background-position: 8px 8px;
+	background-size: 22px 22px;
+	text-align: left;
+
+	&__inner {
+		width: min(100%, 684px);
+	}
+
+	h2 {
+		margin: 0 0 38px;
+		color: var(--color-forest);
+		font-family: var(--font-display);
+		font-size: clamp(1.85rem, 3vw, 2.32rem);
+		font-weight: 800;
+		letter-spacing: -0.035em;
+		line-height: 1.08;
+		text-align: center;
+	}
+
+	&__layout {
+		display: grid;
+		grid-template-columns: 260px minmax(0, 1fr);
+		gap: 24px;
+		align-items: center;
+	}
+
+	&__photo-card {
+		display: grid;
+		place-items: center;
+		align-content: center;
+		min-height: 346px;
+		padding: 28px;
+		border-radius: 8px;
+		background: var(--color-forest);
+		box-shadow: var(--shadow-card);
+		color: var(--color-card-text);
+		text-align: center;
+
+		p {
+			margin: 20px 0 6px;
+			font-size: 0.78rem;
+		}
+
+		span {
+			font-size: 0.66rem;
+			opacity: 0.82;
+		}
+	}
+
+	&__initials {
+		display: grid;
+		place-items: center;
+		width: 68px;
+		height: 68px;
+		border-radius: 999px;
+		background: var(--color-gold);
+		color: var(--color-card-text);
+		font-family: var(--font-display);
+		font-size: 1.55rem;
+		font-weight: 800;
+	}
+
+	&__content {
+		h3 {
+			margin: 0 0 4px;
+			color: var(--color-forest);
+			font-family: var(--font-display);
+			font-size: 1.4rem;
+			font-weight: 800;
+			line-height: 1.1;
+		}
+
+		p {
+			margin: 0 0 14px;
+			color: var(--color-charcoal);
+			font-size: 0.83rem;
+			line-height: 1.55;
+		}
+	}
+
+	&__role {
+		color: #b38608;
+		font-size: 0.8rem;
+		font-weight: 800;
+	}
+
+	blockquote {
+		display: grid;
+		grid-template-columns: 34px minmax(0, 1fr);
+		gap: 12px;
+		margin: 16px 0 0;
+		padding: 18px 22px;
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		background: var(--color-panel);
+		box-shadow: rgba(32, 47, 38, 0.06) 0 8px 18px;
+
+		> span {
+			color: var(--color-gold);
+			font-family: var(--font-display);
+			font-size: 2.2rem;
+			font-weight: 800;
+			line-height: 0.9;
+		}
+
+		p {
+			margin: 0 0 8px;
+			color: var(--color-forest);
+			font-family: var(--font-display);
+			font-size: 1.02rem;
+			font-style: italic;
+			font-weight: 800;
+			line-height: 1.35;
+		}
+
+		cite {
+			color: var(--color-muted);
+			font-size: 0.74rem;
+			font-style: normal;
+		}
+	}
+
+	@media (max-width: 760px) {
+		padding: 56px 24px 62px;
+
+		&__layout {
+			grid-template-columns: 1fr;
+		}
+
+		&__photo-card {
+			min-height: 300px;
+		}
+	}
+}

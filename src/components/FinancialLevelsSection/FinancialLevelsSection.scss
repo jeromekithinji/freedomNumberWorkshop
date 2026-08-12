@@ -1,0 +1,109 @@
+.financial-levels-section {
+	display: grid;
+	place-items: center;
+	padding: 72px 24px 76px;
+	background-color: var(--color-cream);
+	background-image:
+		linear-gradient(var(--color-pattern) 1px, transparent 1px),
+		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
+	background-position: 8px 8px;
+	background-size: 22px 22px;
+	text-align: center;
+
+	&__inner {
+		width: min(100%, 682px);
+	}
+
+	h2 {
+		margin: 0 0 46px;
+		color: var(--color-forest);
+		font-family: var(--font-display);
+		font-size: clamp(1.85rem, 3vw, 2.32rem);
+		font-weight: 800;
+		letter-spacing: -0.035em;
+		line-height: 1.08;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	&__card {
+		display: grid;
+		justify-items: center;
+		align-content: start;
+		min-height: 218px;
+		padding: 28px 24px 24px;
+		border: 1px solid var(--color-border);
+		border-radius: 7px;
+		background: var(--color-panel);
+		box-shadow:
+			rgba(32, 47, 38, 0.08) 0 12px 22px,
+			rgba(32, 47, 38, 0.04) 0 3px 8px;
+
+		h3 {
+			max-width: 170px;
+			margin: 18px 0 12px;
+			color: var(--color-forest);
+			font-family: var(--font-display);
+			font-size: 1.18rem;
+			font-weight: 800;
+			line-height: 1.18;
+		}
+
+		p {
+			margin: 0;
+			color: var(--color-charcoal);
+			font-size: 0.82rem;
+			line-height: 1.55;
+		}
+	}
+
+	&__icon {
+		display: grid;
+		place-items: center;
+		width: 42px;
+		height: 42px;
+		border-radius: 999px;
+
+		svg {
+			width: 22px;
+			height: 22px;
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 1.8;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+	}
+
+	&__icon--green {
+		background: var(--color-forest);
+		color: var(--color-card-text);
+	}
+
+	&__icon--gold {
+		background: var(--color-gold);
+		color: var(--color-card-text);
+	}
+
+	&__note {
+		margin: 34px auto 0;
+		color: var(--color-charcoal);
+		font-family: var(--font-display);
+		font-size: 1rem;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 1.4;
+	}
+
+	@media (max-width: 760px) {
+		padding: 56px 24px 62px;
+
+		&__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}

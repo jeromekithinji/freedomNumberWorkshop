@@ -1,0 +1,155 @@
+.registration-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 20;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+
+	&__backdrop {
+		position: absolute;
+		inset: 0;
+		background: rgba(8, 6, 13, 0.68);
+		backdrop-filter: blur(8px);
+	}
+
+	&__dialog {
+		position: relative;
+		z-index: 1;
+		width: min(760px, 100%);
+		max-height: calc(100svh - 48px);
+		overflow: auto;
+		padding: 32px;
+		border: 1px solid var(--border);
+		border-radius: 28px;
+		background: var(--bg);
+		box-shadow: var(--shadow);
+		text-align: left;
+	}
+
+	&__close {
+		position: absolute;
+		top: 18px;
+		right: 18px;
+		display: grid;
+		place-items: center;
+		width: 36px;
+		height: 36px;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		background: var(--panel);
+		color: var(--text-h);
+		cursor: pointer;
+		font: inherit;
+	}
+
+	&__form,
+	&__success {
+		display: grid;
+		gap: 22px;
+	}
+
+	&__header,
+	&__success {
+		max-width: 620px;
+
+		h2,
+		p {
+			margin: 0;
+		}
+	}
+
+	&__header {
+		display: grid;
+		gap: 10px;
+		padding-right: 48px;
+	}
+
+	&__eyebrow {
+		color: var(--accent);
+		font-size: 0.82rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 16px;
+	}
+
+	label {
+		display: grid;
+		gap: 8px;
+		color: var(--text-h);
+		font-size: 0.9rem;
+		font-weight: 700;
+	}
+
+	input,
+	select,
+	textarea {
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		background: var(--panel);
+		color: var(--text-h);
+		font: inherit;
+		font-weight: 400;
+		padding: 12px 14px;
+
+		&:focus {
+			border-color: var(--accent);
+			outline: 3px solid var(--accent-bg);
+		}
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	&__error {
+		margin: 0;
+		padding: 12px 14px;
+		border-radius: 14px;
+		background: var(--danger-bg);
+		color: var(--danger);
+		font-weight: 700;
+	}
+
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: max-content;
+		min-height: 48px;
+		padding: 0 20px;
+		border: 0;
+		border-radius: 999px;
+		background: var(--accent);
+		color: var(--accent-contrast);
+		cursor: pointer;
+		font: inherit;
+		font-weight: 700;
+	}
+
+	&__button:disabled {
+		cursor: not-allowed;
+		opacity: 0.7;
+	}
+
+	@media (max-width: 700px) {
+		padding: 12px;
+
+		&__dialog {
+			padding: 24px;
+		}
+
+		&__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}

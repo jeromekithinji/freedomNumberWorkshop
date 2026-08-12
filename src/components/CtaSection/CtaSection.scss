@@ -1,0 +1,133 @@
+.cta-section {
+	display: grid;
+	place-items: center;
+	padding: 72px 24px 86px;
+	background-color: var(--color-cream);
+	background-image:
+		linear-gradient(var(--color-pattern) 1px, transparent 1px),
+		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
+	background-position: 8px 8px;
+	background-size: 22px 22px;
+	text-align: center;
+
+	&__inner {
+		display: grid;
+		justify-items: center;
+		width: min(100%, 590px);
+	}
+
+	h2 {
+		margin: 0 0 18px;
+		color: var(--color-forest);
+		font-family: var(--font-display);
+		font-size: clamp(1.85rem, 3vw, 2.35rem);
+		font-weight: 800;
+		letter-spacing: -0.035em;
+		line-height: 1.08;
+	}
+
+	p {
+		max-width: 610px;
+		margin: 0;
+		color: var(--color-charcoal);
+		font-size: 0.95rem;
+		line-height: 1.65;
+
+		& + p {
+			margin-top: 34px;
+		}
+	}
+
+	&__outcomes {
+		width: min(100%, 500px);
+		columns: 2;
+		column-gap: 56px;
+		padding: 0;
+		margin: 34px 0 58px;
+		color: var(--color-charcoal);
+		font-size: 0.86rem;
+		line-height: 1.45;
+		text-align: left;
+		list-style: none;
+
+		li {
+			position: relative;
+			break-inside: avoid;
+			padding-left: 18px;
+			margin: 0 0 14px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0.65em;
+				left: 0;
+				width: 6px;
+				height: 6px;
+				border-radius: 999px;
+				background: var(--color-gold);
+			}
+		}
+	}
+
+	&__process {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 34px;
+		width: max-content;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+		color: var(--color-forest);
+		font-size: 0.76rem;
+		font-weight: 800;
+		list-style: none;
+	}
+
+	&__process li {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 104px;
+		min-height: 42px;
+		padding: 0 18px;
+		border: 1px solid var(--color-border);
+		border-radius: 5px;
+		background: var(--color-panel);
+		box-shadow: rgba(32, 47, 38, 0.08) 0 8px 18px;
+
+		&:not(:last-child)::after {
+			content: '->';
+			position: absolute;
+			right: -25px;
+			color: var(--color-gold);
+			font-size: 1rem;
+			font-weight: 500;
+		}
+	}
+
+	@media (max-width: 760px) {
+		padding: 56px 24px 64px;
+
+		&__outcomes {
+			columns: 1;
+			margin-bottom: 42px;
+		}
+
+		&__process {
+			align-items: stretch;
+			flex-direction: column;
+			gap: 12px;
+			width: 100%;
+		}
+
+		&__process li {
+			width: 100%;
+
+			&:not(:last-child)::after {
+				content: '';
+			}
+		}
+	}
+}

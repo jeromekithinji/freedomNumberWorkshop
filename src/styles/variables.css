@@ -1,0 +1,54 @@
+:root {
+	--color-cream: #fbfaf4;
+	--color-pattern: rgba(118, 128, 116, 0.12);
+	--color-forest: #126044;
+	--color-forest-dark: #0f4f38;
+	--color-card-green: #2f7659;
+	--color-card-green-dark: #2a6b51;
+	--color-gold: #f3ad16;
+	--color-gold-soft: rgba(243, 173, 22, 0.34);
+	--color-charcoal: #454b52;
+	--color-muted: #626b72;
+	--color-card-text: #fff9ec;
+	--color-card-muted: rgba(255, 249, 236, 0.7);
+	--color-button-text: #283022;
+	--color-danger: #b91c1c;
+	--color-danger-bg: rgba(185, 28, 28, 0.1);
+	--color-border: #eadfce;
+	--color-panel: #ffffff;
+	--color-surface: #fff0dc;
+
+	--text: var(--color-muted);
+	--text-h: var(--color-forest);
+	--bg: var(--color-cream);
+	--panel: var(--color-panel);
+	--surface: var(--color-surface);
+	--border: var(--color-border);
+	--accent: var(--color-gold);
+	--accent-contrast: var(--color-button-text);
+	--accent-bg: var(--color-gold-soft);
+	--danger: var(--color-danger);
+	--danger-bg: var(--color-danger-bg);
+
+	--font-body: Inter, ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+	--font-display: Georgia, 'Times New Roman', serif;
+	--font-mono: ui-monospace, Consolas, monospace;
+
+	--sans: var(--font-body);
+	--heading: var(--font-display);
+	--mono: var(--font-mono);
+
+	--shadow-card:
+		rgba(38, 91, 67, 0.24) 0 26px 45px,
+		rgba(38, 91, 67, 0.12) 0 8px 16px;
+	--shadow-button:
+		rgba(179, 118, 0, 0.24) 0 12px 22px,
+		rgba(179, 118, 0, 0.16) 0 4px 8px;
+	--shadow-button-hover:
+		rgba(179, 118, 0, 0.3) 0 16px 28px,
+		rgba(179, 118, 0, 0.2) 0 6px 10px;
+	--shadow:
+		rgba(88, 52, 12, 0.1) 0 22px 55px,
+		rgba(88, 52, 12, 0.08) 0 8px 18px;
+}
+
