@@ -156,6 +156,20 @@
 			font-size: 0.72rem;
 			font-style: italic;
 		}
+
+		ul {
+			display: grid;
+			gap: 5px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		li {
+			color: var(--color-muted);
+			font-size: 0.72rem;
+			line-height: 1.35;
+		}
 	}
 
 	&__reference {

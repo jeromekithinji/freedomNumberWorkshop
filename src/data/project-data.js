@@ -305,28 +305,35 @@ export const pricingContent = {
   action: 'Register for the Workshop',
   paymentTitle: 'Payment Instructions',
   paymentDescription:
-    'Payment instructions will be shared here or provided after registration.',
+    'Use the payment option that matches your location or preferred currency.',
   paymentMethods: [
     {
       title: 'M-Pesa Payment Details',
-      description: '[Edit: Add M-Pesa details here]',
-    },
-    {
-      title: 'Kenyan Bank Details',
-      description: '[Edit: Add bank details here]',
-    },
-    {
-      title: 'Nigerian Payment Details',
-      description: '[Edit: Add Nigerian payment details here]',
+      details: [
+        'MPESA Paybill: 247247',
+        'A/C No: 0759285059',
+        'Ksh. 3,500',
+      ],
     },
     {
       title: 'International Payment Link',
-      description: '[Edit: Add international payment link here]',
+      details: [
+        'PayPal: $27',
+        'Email: wanjikuhk@gmail.com',
+      ],
+    },
+    {
+      title: 'Nigerian Payment Details',
+      details: [
+        'First Bank: 3222605273',
+        'Name: Emma Emina',
+        'Naira: 38,800',
+      ],
     },
   ],
   reference:
-    'Payment reference: [Edit: Add payment reference instructions here, e.g. ' +
-    '"Use your full name as the payment reference."]',
+    'After payment, complete the registration form and include your payment ' +
+    'reference or transaction code where available.',
 }
 
 export const faqContent = {

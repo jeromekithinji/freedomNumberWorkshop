@@ -115,7 +115,13 @@ export function RegistrationSection({ fieldOptions }) {
           </label>
 
           <label>
-            Mobile Number (including country code) <span>*</span>
+            Mobile Number
+            {' '}
+            <em className="registration-section__label-note">
+              (including country code)
+            </em>
+            {' '}
+            <span>*</span>
             <input
               type="tel"
               name="phone"
@@ -216,6 +222,10 @@ export function RegistrationSection({ fieldOptions }) {
 
               <label>
                 Upload Proof of Payment
+                {' '}
+                <em className="registration-section__label-note">
+                  (if applicable)
+                </em>
                 <input
                   type="file"
                   accept="image/*,.pdf"

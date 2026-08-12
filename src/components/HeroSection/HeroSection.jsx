@@ -1,4 +1,5 @@
 import './HeroSection.scss'
+import finSmartLogo from '../../assets/finsmart-logo.png'
 
 export function HeroSection({
   content,
@@ -6,6 +7,12 @@ export function HeroSection({
 }) {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
+      <img
+        className="hero-section__logo"
+        src={finSmartLogo}
+        alt="FinSmart"
+      />
+
       <div className="hero-section__content">
         <h1 id="hero-title">{content.title}</h1>
         <p className="hero-section__subtitle">{content.subtitle}</p>

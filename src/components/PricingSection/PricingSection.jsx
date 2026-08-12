@@ -39,7 +39,15 @@ export function PricingSection({ content, onRegister }) {
             {content.paymentMethods.map((method) => (
               <article key={method.title}>
                 <h4>{method.title}</h4>
-                <p>{method.description}</p>
+                {method.details ? (
+                  <ul>
+                    {method.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{method.description}</p>
+                )}
               </article>
             ))}
           </div>

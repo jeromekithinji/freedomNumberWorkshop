@@ -5,7 +5,9 @@ export function FaqSection({ content }) {
   const [openIndex, setOpenIndex] = useState(null)
 
   function handleToggle(index) {
-    setOpenIndex(index)
+    setOpenIndex((currentIndex) => (
+      currentIndex === index ? null : index
+    ))
   }
 
   return (
@@ -33,8 +35,8 @@ export function FaqSection({ content }) {
                   aria-controls={answerId}
                   onClick={() => handleToggle(index)}
                 >
-                <span>{item.question}</span>
-                <span className="faq-section__chevron" aria-hidden="true" />
+                  <span>{item.question}</span>
+                  <span className="faq-section__chevron" aria-hidden="true" />
                 </button>
 
                 {isOpen ? (

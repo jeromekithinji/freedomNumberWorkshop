@@ -1,137 +1,109 @@
 .submissions-page {
 	display: grid;
-	gap: 32px;
+	gap: 16px;
 	min-height: 100svh;
-	padding: 64px 48px;
+	padding: 18px 16px 48px;
+	background: #f4f2f7;
 	text-align: left;
 
 	&__header {
-		display: grid;
-		gap: 14px;
-		max-width: 760px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 24px;
 
-		h1,
-		p {
+		h1 {
 			margin: 0;
+			color: var(--ink);
+			font-size: clamp(1.8rem, 4vw, 3rem);
+			line-height: 1;
 		}
 
 		a {
+			display: inline-block;
+			margin-bottom: 8px;
 			width: max-content;
 			color: var(--accent);
 			font-weight: 700;
 			text-decoration: none;
 		}
+
+		button {
+			min-height: 44px;
+			padding: 0 22px;
+			border: 0;
+			border-radius: 9px;
+			background: #171c46;
+			color: #fff;
+			font: 800 0.82rem/1 var(--sans);
+			cursor: pointer;
+		}
+
+		button:disabled {
+			cursor: not-allowed;
+			opacity: 0.55;
+		}
 	}
 
 	&__status {
+		margin: 0;
 		padding: 20px;
 		border: 1px solid var(--border);
-		border-radius: 18px;
+		border-radius: 14px;
 		background: var(--panel);
 	}
 
 	&__table-wrap {
 		overflow-x: auto;
-		border: 1px solid var(--border);
-		border-radius: 22px;
+		border: 1px solid #d9d8e3;
+		border-radius: 8px;
 		background: var(--panel);
 	}
 
 	table {
 		width: 100%;
 		border-collapse: collapse;
-		min-width: 760px;
+		min-width: 1380px;
+		text-align: left;
 	}
 
 	th,
 	td {
-		padding: 16px;
-		border-bottom: 1px solid var(--border);
-		text-align: left;
+		padding: 10px 14px;
+		border-bottom: 1px solid #e5e4ec;
+		color: #2f2e42;
+		font-size: 0.9rem;
+		line-height: 1.35;
+		white-space: nowrap;
 	}
 
 	th {
-		color: var(--text-h);
-		font-size: 0.82rem;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+		background: #171c46;
+		color: #fff;
+		font-weight: 800;
+	}
+
+	thead th:first-child {
+		border-top-left-radius: 6px;
+	}
+
+	thead th:last-child {
+		border-top-right-radius: 6px;
+	}
+
+	tbody tr:nth-child(even) {
+		background: #f9f9fc;
 	}
 
 	tbody tr:last-child td {
 		border-bottom: 0;
 	}
 
-	@media (max-width: 700px) {
-		padding: 48px 24px;
-	}
-}
-.submissions-page {
-	display: grid;
-	gap: 32px;
-	padding: 64px 48px;
-
-	&__header {
-		display: grid;
-		gap: 16px;
-
-		a {
-			width: max-content;
-			color: var(--accent);
-			font-weight: 700;
-			text-decoration: none;
-		}
-
-		h1,
-		p {
-			margin: 0;
-		}
-	}
-
-	&__content {
-		display: grid;
-		gap: 20px;
-	}
-
-	&__error {
-		margin: 0;
-		padding: 14px 16px;
-		border-radius: 14px;
-		background: var(--danger-bg);
-		color: var(--danger);
-	}
-
-	&__table-wrapper {
-		overflow-x: auto;
-		border: 1px solid var(--border);
-		border-radius: 22px;
-		background: var(--panel);
-	}
-
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		text-align: left;
-	}
-
-	th,
-	td {
-		padding: 16px;
-		border-bottom: 1px solid var(--border);
-		white-space: nowrap;
-	}
-
-	th {
-		color: var(--text-h);
-		font-size: 0.82rem;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-	}
-
-	tr:last-child td {
-		border-bottom: 0;
-	}
-
 	@media (max-width: 720px) {
-		padding: 48px 24px;
+		padding: 18px 12px 40px;
+
+		&__header {
+			display: grid;
+		}
 	}
 }

@@ -1,4 +1,5 @@
 import './FacilitatorSection.scss'
+import helenPhoto from '../../assets/helen-kithinji.png'
 
 export function FacilitatorSection({ content }) {
   return (
@@ -11,11 +12,7 @@ export function FacilitatorSection({ content }) {
 
         <div className="facilitator-section__layout">
           <div className="facilitator-section__photo-card">
-            <div className="facilitator-section__initials">
-              {content.initials}
-            </div>
-            <p>{content.placeholder}</p>
-            <span>{content.placeholderNote}</span>
+            <img src={helenPhoto} alt={content.name} />
           </div>
 
           <div className="facilitator-section__content">

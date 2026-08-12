@@ -35,8 +35,7 @@
 	}
 
 	label {
-		display: grid;
-		gap: 8px;
+		display: block;
 		color: var(--color-charcoal);
 		font-size: 0.78rem;
 		font-weight: 700;
@@ -47,10 +46,19 @@
 		color: #e11d48;
 	}
 
+	&__label-note {
+		color: var(--color-muted);
+		font-size: 0.9em;
+		font-style: italic;
+		font-weight: 500;
+	}
+
 	input,
 	select {
+		display: block;
 		width: 100%;
 		min-height: 38px;
+		margin-top: 8px;
 		box-sizing: border-box;
 		border: 1px solid var(--color-border);
 		border-radius: 4px;
@@ -77,22 +85,23 @@
 			width: 100%;
 			margin-bottom: 12px;
 			color: var(--color-charcoal);
-			font-size: 1rem;
-			font-weight: 800;
+			font-size: 0.78rem;
+			font-weight: 700;
 		}
 
 		label {
 			display: inline-flex;
 			align-items: center;
 			gap: 10px;
-			font-size: 0.95rem;
-			font-weight: 600;
+			font-size: 0.78rem;
+			font-weight: 700;
 		}
 
 		input {
 			width: 22px;
 			height: 22px;
 			min-height: 0;
+			margin-top: 0;
 			accent-color: var(--color-forest);
 		}
 	}
@@ -113,17 +122,19 @@
 		}
 
 		label {
-			font-size: 0.98rem;
+			font-size: 0.78rem;
 		}
 
 		input {
-			min-height: 54px;
-			border-radius: 7px;
+			min-height: 38px;
+			border-radius: 4px;
 			background: var(--color-panel);
-			font-size: 0.95rem;
+			font-size: 0.78rem;
 		}
 
 		small {
+			display: block;
+			margin-top: 8px;
 			color: var(--color-muted);
 			font-size: 0.78rem;
 			font-weight: 400;
@@ -141,18 +152,19 @@
 		line-height: 1.55;
 	}
 
-	&__checkbox {
+	& &__checkbox {
 		display: grid;
-		grid-template-columns: 24px minmax(0, 1fr);
-		gap: 14px;
+		grid-template-columns: 18px minmax(0, 1fr);
+		gap: 10px;
 		align-items: start;
-		font-size: 1rem;
-		line-height: 1.5;
+		font-size: 0.78rem;
+		line-height: 1.45;
 
 		input {
-			width: 22px;
-			height: 22px;
+			width: 18px;
+			height: 18px;
 			min-height: 0;
+			margin-top: 1px;
 			accent-color: var(--color-forest);
 		}
 
