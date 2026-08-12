@@ -49,6 +49,10 @@ export function RegistrationSection({ fieldOptions }) {
     }))
   }
 
+  function handleCloseSuccess() {
+    setSuccessMessage('')
+  }
+
   async function handleSubmit(event) {
     event.preventDefault()
     setIsSubmitting(true)
@@ -276,12 +280,6 @@ export function RegistrationSection({ fieldOptions }) {
             </p>
           ) : null}
 
-          {successMessage ? (
-            <p className="registration-section__success" role="status">
-              {successMessage}
-            </p>
-          ) : null}
-
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Submitting...' : 'Submit My Registration'}
           </button>
@@ -292,6 +290,56 @@ export function RegistrationSection({ fieldOptions }) {
           </p>
         </form>
       </div>
+
+      {successMessage ? (
+        <div className="registration-section__modal-backdrop">
+          <div
+            className="registration-section__success-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="registration-success-title"
+          >
+            <div className="registration-section__modal-header">
+              <span aria-hidden="true">✧</span>
+              <button
+                type="button"
+                onClick={handleCloseSuccess}
+                aria-label="Close registration confirmation"
+              >
+                ×
+              </button>
+              <p>Freedom Number Workshop</p>
+            </div>
+
+            <div className="registration-section__modal-body">
+              <div
+                className="registration-section__success-icon"
+                aria-hidden="true"
+              >
+                ✓
+              </div>
+
+              <h3 id="registration-success-title">
+                Registration Submitted!
+              </h3>
+              <p>
+                Thank you for registering for the Freedom Number Workshop.
+                Your details have been sent to the workshop organizers, and
+                you will receive a confirmation shortly.
+              </p>
+              <p>
+                We look forward to seeing you on
+                {' '}
+                <strong>Saturday, 12 September 2026.</strong>
+              </p>
+
+              <button type="button" onClick={handleCloseSuccess}>
+                Close & Return to Page
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   )
 }

@@ -20,9 +20,11 @@ export function FooterSection({ content }) {
           ))}
         </nav>
 
-        <p className="footer-section__social">
-          {content.socialPlaceholder}
-        </p>
+        <div className="footer-section__contact">
+          {content.contactLines.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
 
         <hr />
 

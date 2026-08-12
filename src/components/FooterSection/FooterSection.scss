@@ -54,11 +54,19 @@
 		}
 	}
 
-	&__social {
+	&__contact {
 		margin: 0 0 24px;
 		color: rgba(255, 249, 236, 0.46);
 		font-size: 0.72rem;
 		font-style: italic;
+
+		p {
+			margin: 0 0 6px;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	hr {

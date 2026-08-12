@@ -414,7 +414,10 @@ export const footerContent = {
     'Terms and Conditions',
     'Refund and Cancellation Policy',
   ],
-  socialPlaceholder: '[Edit: Add social media links here]',
+  contactLines: [
+    'For more information call: +254721955779',
+    'WhatsApp: +254725749544',
+  ],
   disclaimer:
     'This workshop provides general financial education and planning ' +
     'illustrations. It does not constitute personalised investment, tax, ' +
