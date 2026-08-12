@@ -3,15 +3,13 @@
 	place-items: center;
 	padding: 72px 24px 76px;
 	background-color: var(--color-cream);
-	background-image:
-		linear-gradient(var(--color-pattern) 1px, transparent 1px),
-		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
-	background-position: 8px 8px;
-	background-size: 22px 22px;
+	background-image: var(--pattern-plus);
+	background-position: 0 0;
+	background-size: 44px 44px;
 	text-align: center;
 
 	&__inner {
-		width: min(100%, 682px);
+		width: min(100%, 802px);
 	}
 
 	h2 {

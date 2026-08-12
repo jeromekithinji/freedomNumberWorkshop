@@ -3,15 +3,13 @@
 	place-items: center;
 	padding: 72px 24px 70px;
 	background-color: var(--color-cream);
-	background-image:
-		linear-gradient(var(--color-pattern) 1px, transparent 1px),
-		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
-	background-position: 8px 8px;
-	background-size: 22px 22px;
+	background-image: var(--pattern-plus);
+	background-position: 0 0;
+	background-size: 44px 44px;
 	text-align: left;
 
 	&__inner {
-		width: min(100%, 684px);
+		width: min(100%, 804px);
 	}
 
 	h2 {
@@ -29,11 +27,12 @@
 		display: grid;
 		grid-template-columns: 260px minmax(0, 1fr);
 		gap: 24px;
-		align-items: center;
+		align-items: stretch;
 	}
 
 	&__photo-card {
 		overflow: hidden;
+		height: 100%;
 		min-height: 346px;
 		border-radius: 8px;
 		background: var(--color-panel);
@@ -43,7 +42,7 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			min-height: 346px;
+			min-height: 100%;
 			object-fit: cover;
 			object-position: center;
 		}
@@ -55,7 +54,7 @@
 			color: var(--color-forest);
 			font-family: var(--font-display);
 			font-size: 1.4rem;
-			font-weight: 800;
+			font-weight: 1000 !important;
 			line-height: 1.1;
 		}
 
@@ -68,43 +67,55 @@
 	}
 
 	&__role {
-		color: #b38608;
+		color: #b38608 !important;
 		font-size: 0.8rem;
-		font-weight: 800;
+		font-weight: 400;
 	}
 
 	blockquote {
 		display: grid;
-		grid-template-columns: 34px minmax(0, 1fr);
-		gap: 12px;
-		margin: 16px 0 0;
-		padding: 18px 22px;
+		grid-template-columns: 41px minmax(0, 1fr);
+		gap: 16px;
+		margin: 24px 0 0;
+		padding: 12px 32px;
 		border: 1px solid var(--color-border);
-		border-radius: 8px;
+		border-radius: 12px;
 		background: var(--color-panel);
 		box-shadow: rgba(32, 47, 38, 0.06) 0 8px 18px;
 
 		> span {
 			color: var(--color-gold);
-			font-family: var(--font-display);
-			font-size: 2.2rem;
+			font-family:
+				ui-serif,
+				Georgia,
+				Cambria,
+				'Times New Roman',
+				Times,
+				serif;
+			font-size: 3.2rem;
 			font-weight: 800;
-			line-height: 0.9;
+			line-height: 0.72;
 		}
 
 		p {
-			margin: 0 0 8px;
+			margin: 0 0 18px;
 			color: var(--color-forest);
-			font-family: var(--font-display);
-			font-size: 1.02rem;
+			font-family:
+				ui-serif,
+				Georgia,
+				Cambria,
+				'Times New Roman',
+				Times,
+				serif;
+			font-size: clamp(0.92rem, 1.45vw, 1.08rem);
 			font-style: italic;
-			font-weight: 800;
-			line-height: 1.35;
+			font-weight: 700;
+			line-height: 1.32;
 		}
 
 		cite {
 			color: var(--color-muted);
-			font-size: 0.74rem;
+			font-size: 0.82rem;
 			font-style: normal;
 		}
 	}

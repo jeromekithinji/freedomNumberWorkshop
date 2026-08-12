@@ -8,11 +8,12 @@
 	&__inner {
 		display: grid;
 		gap: 22px;
-		width: min(100%, 590px);
+		justify-items: center;
+		width: min(100%, 804px);
 	}
 
 	h2 {
-		max-width: 620px;
+		max-width: 760px;
 		margin: 0 0 10px;
 		color: var(--color-forest);
 		font-family: var(--font-display);
@@ -24,6 +25,7 @@
 	}
 
 	p {
+		width: min(100%, 760px);
 		margin: 0;
 		color: var(--color-charcoal);
 		font-size: 0.95rem;
@@ -31,6 +33,7 @@
 	}
 
 	blockquote {
+		width: min(100%, 760px);
 		margin: 0;
 		padding: 4px 0 4px 22px;
 		border-left: 3px solid var(--color-gold);

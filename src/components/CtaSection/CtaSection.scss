@@ -3,17 +3,15 @@
 	place-items: center;
 	padding: 72px 24px 86px;
 	background-color: var(--color-cream);
-	background-image:
-		linear-gradient(var(--color-pattern) 1px, transparent 1px),
-		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
-	background-position: 8px 8px;
-	background-size: 22px 22px;
+	background-image: var(--pattern-plus);
+	background-position: 0 0;
+	background-size: 44px 44px;
 	text-align: center;
 
 	&__inner {
 		display: grid;
 		justify-items: center;
-		width: min(100%, 590px);
+		width: min(100%, 804px);
 	}
 
 	h2 {
@@ -27,7 +25,7 @@
 	}
 
 	p {
-		max-width: 610px;
+		max-width: 760px;
 		margin: 0;
 		color: var(--color-charcoal);
 		font-size: 0.95rem;
@@ -39,9 +37,11 @@
 	}
 
 	&__outcomes {
-		width: min(100%, 500px);
-		columns: 2;
-		column-gap: 56px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(260px, 330px));
+		justify-content: center;
+		gap: 16px 72px;
+		width: min(100%, 804px);
 		padding: 0;
 		margin: 34px 0 58px;
 		color: var(--color-charcoal);
@@ -52,9 +52,8 @@
 
 		li {
 			position: relative;
-			break-inside: avoid;
 			padding-left: 18px;
-			margin: 0 0 14px;
+			margin: 0;
 
 			&::before {
 				content: '';
@@ -111,7 +110,8 @@
 		padding: 56px 24px 64px;
 
 		&__outcomes {
-			columns: 1;
+			grid-template-columns: minmax(0, 1fr);
+			width: min(100%, 360px);
 			margin-bottom: 42px;
 		}
 

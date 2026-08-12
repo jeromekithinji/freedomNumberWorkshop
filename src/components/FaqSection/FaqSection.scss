@@ -3,14 +3,12 @@
 	place-items: center;
 	padding: 58px 24px 68px;
 	background-color: var(--color-cream);
-	background-image:
-		linear-gradient(var(--color-pattern) 1px, transparent 1px),
-		linear-gradient(90deg, var(--color-pattern) 1px, transparent 1px);
-	background-position: 8px 8px;
-	background-size: 22px 22px;
+	background-image: var(--pattern-plus);
+	background-position: 0 0;
+	background-size: 44px 44px;
 
 	&__inner {
-		width: min(100%, 500px);
+		width: min(100%, 620px);
 	}
 
 	h2 {
@@ -50,7 +48,7 @@
 		color: var(--color-charcoal);
 		cursor: pointer;
 		font-family: var(--font-display);
-		font-size: 0.82rem;
+		font-size: 1rem;
 		font-weight: 700;
 		text-align: left;
 		list-style: none;
@@ -71,7 +69,7 @@
 
 	&__item--open button {
 		min-height: 60px;
-		font-size: 0.82rem;
+		font-size: 1rem;
 	}
 
 	&__item--open .faq-section__chevron {

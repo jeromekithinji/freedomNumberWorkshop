@@ -3,7 +3,7 @@ export const workshopDate = '2026-09-19T10:00:00-04:00'
 export const heroContent = {
   title: 'Your Freedom Number for Lasting Financial Abundance',
   subtitle:
-    'Turn Financial Freedom from a Dream into a Number--and a Practical Plan',
+    'Turn Financial Freedom from a Dream into a Number and a Practical Plan',
   description:
     'Discover how much you need to fund your desired life, calculate your ' +
     'personal Freedom Number, and develop a practical roadmap towards ' +
@@ -287,9 +287,9 @@ export const facilitatorContent = {
       'wellbeing.',
   ],
   quote:
-    'Your financial breakthrough will not happen by chance. It will happen ' +
-    'by decision.',
-  quoteAttribution: 'Helen Kithinji, Money March',
+    '"Your financial breakthrough will not happen by chance. It will happen ' +
+    'by decision."',
+  quoteAttribution: '- Helen Kithinji, Money March',
 }
 
 export const pricingContent = {
@@ -415,8 +415,8 @@ export const footerContent = {
     'Refund and Cancellation Policy',
   ],
   contactLines: [
-    'For more information call: +254721955779',
-    'WhatsApp: +254725749544',
+    'For more information call: +254 758 741742',
+    'WhatsApp: +254 725 749544',
   ],
   disclaimer:
     'This workshop provides general financial education and planning ' +

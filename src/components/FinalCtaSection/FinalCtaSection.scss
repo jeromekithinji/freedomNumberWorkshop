@@ -8,7 +8,7 @@
 	&__inner {
 		display: grid;
 		justify-items: center;
-		width: min(100%, 520px);
+		width: min(100%, 640px);
 	}
 
 	h2 {
@@ -59,15 +59,18 @@
 			display: inline-flex;
 			align-items: center;
 			gap: 6px;
-
-			&::before {
-				content: '';
-				width: 9px;
-				height: 9px;
-				border: 1.5px solid var(--color-gold);
-				border-radius: 2px;
-			}
 		}
+	}
+
+	&__detail-icon {
+		width: 18px;
+		height: 18px;
+		flex: 0 0 auto;
+		color: var(--color-gold);
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2;
 	}
 
 	p.final-cta-section__investment {
@@ -77,13 +80,5 @@
 		margin: 0;
 		color: var(--color-charcoal);
 		font-size: 0.74rem;
-
-		&::before {
-			content: '';
-			width: 9px;
-			height: 9px;
-			border: 1.5px solid var(--color-gold);
-			border-radius: 999px;
-		}
 	}
 }
