@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/view/submissions",
+      "destination": "/index.html"
+    }
+  ]
+}
