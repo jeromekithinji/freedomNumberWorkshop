@@ -1,4 +1,4 @@
-export const workshopDate = '2026-09-19T10:00:00-04:00'
+export const workshopDate = '2026-11-12T19:00:00+03:00'
 
 export const heroContent = {
   title: 'Your Freedom Number for Lasting Financial Abundance',
@@ -13,8 +13,8 @@ export const heroContent = {
   note:
     'Limited places available. Registration is confirmed upon payment.',
   eventDetails: [
-    'Saturday, 12 September 2026',
-    '9.00 AM EAT',
+    'Thursday, 12 November 2026',
+    '7:00 PM EAT',
     'Live Online | Four-Hour Workshop',
   ],
   card: {
@@ -398,8 +398,8 @@ export const finalCtaContent = {
     'intentional step.',
   action: 'Calculate My Freedom Number',
   details: [
-    'Saturday, 12 September 2026',
-    '9.00 AM EAT',
+    'Thursday, 12 November 2026',
+    '7:00 PM EAT',
     'Live Online | Four Hours',
   ],
   investment: 'KSh 3,500 | US$27 | ₦38,800',
