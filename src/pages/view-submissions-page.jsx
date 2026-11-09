@@ -94,10 +94,54 @@ const submissionColumns = [
   },
 ]
 
+const submissionPeriods = [
+  {
+    value: 'all',
+    label: 'All submissions',
+    monthIndex: null,
+  },
+  {
+    value: 'september',
+    label: 'September',
+    monthIndex: 8,
+  },
+  {
+    value: 'november',
+    label: 'November',
+    monthIndex: 10,
+  },
+]
+
+function getSubmissionPeriod(createdAt) {
+  const submittedAt = new Date(createdAt)
+
+  if (Number.isNaN(submittedAt.getTime())) {
+    return ''
+  }
+
+  return submissionPeriods.find((period) => (
+    period.monthIndex === submittedAt.getMonth()
+  ))?.value || ''
+}
+
 export function ViewSubmissionsPage() {
   const [submissions, setSubmissions] = useState([])
+  const [selectedPeriod, setSelectedPeriod] = useState('all')
   const [isLoading, setIsLoading] = useState(true)
   const [errorMessage, setErrorMessage] = useState('')
+
+  const selectedPeriodLabel = submissionPeriods.find((period) => (
+    period.value === selectedPeriod
+  ))?.label
+  const filteredCountLabel = selectedPeriod === 'all'
+    ? 'submissions'
+    : `${selectedPeriodLabel} registrations`
+
+  const filteredSubmissions = selectedPeriod === 'all'
+    ? submissions
+    : submissions.filter((submission) => (
+      getSubmissionPeriod(submission.createdAt) === selectedPeriod
+    ))
 
   useEffect(() => {
     let isCurrent = true
@@ -133,7 +177,7 @@ export function ViewSubmissionsPage() {
   }, [])
 
   function handleDownloadSpreadsheet() {
-    const rows = submissions.map((submission) => (
+    const rows = filteredSubmissions.map((submission) => (
       `<tr>${submissionColumns.map((column) => (
         `<td>${escapeHtml(column.getValue(submission))}</td>`
       )).join('')}</tr>`
@@ -168,7 +212,7 @@ export function ViewSubmissionsPage() {
     const link = document.createElement('a')
 
     link.href = url
-    link.download = 'workshop-registrations.xls'
+    link.download = `${selectedPeriod}-workshop-registrations.xls`
     link.click()
     URL.revokeObjectURL(url)
   }
@@ -184,11 +228,35 @@ export function ViewSubmissionsPage() {
         <button
           type="button"
           onClick={handleDownloadSpreadsheet}
-          disabled={submissions.length === 0}
+          disabled={filteredSubmissions.length === 0}
         >
           Download Spreadsheet
         </button>
       </header>
+
+      {!isLoading && !errorMessage ? (
+        <div className="submissions-page__controls">
+          <label>
+            Select workshop
+            <select
+              value={selectedPeriod}
+              onChange={(event) => setSelectedPeriod(event.target.value)}
+            >
+              {submissionPeriods.map((period) => (
+                <option value={period.value} key={period.value}>
+                  {period.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <p>
+            {filteredSubmissions.length}
+            {' '}
+            {filteredCountLabel}
+          </p>
+        </div>
+      ) : null}
 
       {isLoading ? (
         <p className="submissions-page__status">Loading submissions...</p>
@@ -206,7 +274,14 @@ export function ViewSubmissionsPage() {
         </p>
       ) : null}
 
-      {submissions.length > 0 ? (
+      {!isLoading && !errorMessage && submissions.length > 0
+        && filteredSubmissions.length === 0 ? (
+        <p className="submissions-page__status">
+          No submissions found for {selectedPeriodLabel}.
+        </p>
+      ) : null}
+
+      {filteredSubmissions.length > 0 ? (
         <div className="submissions-page__table-wrap">
           <table>
             <thead>
@@ -217,7 +292,7 @@ export function ViewSubmissionsPage() {
               </tr>
             </thead>
             <tbody>
-              {submissions.map((submission) => (
+              {filteredSubmissions.map((submission) => (
                 <tr key={submission.id}>
                   {submissionColumns.map((column) => (
                     <td key={column.label}>

@@ -1,6 +1,7 @@
 .submissions-page {
 	display: grid;
-	gap: 16px;
+	align-content: start;
+	gap: 12px;
 	min-height: 100svh;
 	padding: 18px 16px 48px;
 	background: #f4f2f7;
@@ -51,6 +52,46 @@
 		border: 1px solid var(--border);
 		border-radius: 14px;
 		background: var(--panel);
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 8px 12px;
+		border: 1px solid #d9d8e3;
+		border-radius: 10px;
+		background: var(--panel);
+
+		label {
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			color: #2f2e42;
+			font-size: 0.82rem;
+			font-weight: 800;
+			white-space: nowrap;
+		}
+
+		select {
+			min-width: 190px;
+			min-height: 36px;
+			padding: 0 12px;
+			border: 1px solid #d9d8e3;
+			border-radius: 8px;
+			background: #fff;
+			color: #2f2e42;
+			font: inherit;
+			font-weight: 700;
+		}
+
+		p {
+			margin: 0;
+			color: #5e6070;
+			font-size: 0.82rem;
+			font-weight: 800;
+		}
 	}
 
 	&__table-wrap {
@@ -104,6 +145,17 @@
 
 		&__header {
 			display: grid;
+		}
+
+		&__controls {
+			align-items: stretch;
+			display: grid;
+
+			label {
+				display: grid;
+				gap: 8px;
+				white-space: normal;
+			}
 		}
 	}
 }

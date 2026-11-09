@@ -14,7 +14,7 @@ export const heroContent = {
     'Limited places available. Registration is confirmed upon payment.',
   eventDetails: [
     'Thursday, 12 November 2026',
-    '9am 🇳🇬 / 11am EAT 🇰🇪',
+    '9am (GMT+1) 🇳🇬 / 11am (EAT) 🇰🇪',
     'Live Online | Four-Hour Workshop',
   ],
   card: {
@@ -399,7 +399,7 @@ export const finalCtaContent = {
   action: 'Calculate My Freedom Number',
   details: [
     'Thursday, 12 November 2026',
-    '9am 🇳🇬 / 11am EAT 🇰🇪',
+    '9am (GMT+1) 🇳🇬 / 11am (EAT) 🇰🇪',
     'Live Online | Four Hours',
   ],
   investment: 'KSh 3,500 | US$27 | ₦38,800',
