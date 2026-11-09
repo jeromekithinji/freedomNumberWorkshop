@@ -47,6 +47,8 @@ function DetailIcon({ name }) {
 
 export function HeroSection({
   content,
+  countdown,
+  countdownLabels,
   onRegister,
 }) {
   return (
@@ -61,6 +63,17 @@ export function HeroSection({
         <h1 id="hero-title">{content.title}</h1>
         <p className="hero-section__subtitle">{content.subtitle}</p>
         <p className="hero-section__description">{content.description}</p>
+
+        {countdown ? (
+          <div className="hero-section__countdown" aria-label="Event countdown">
+            {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
+              <span key={unit}>
+                <strong>{String(countdown[unit]).padStart(2, '0')}</strong>
+                {countdownLabels[unit]}
+              </span>
+            ))}
+          </div>
+        ) : null}
 
         <ul className="hero-section__details" aria-label="Workshop details">
           {content.eventDetails.map((detail, index) => (

@@ -63,6 +63,34 @@
 		line-height: 1.6;
 	}
 
+	&__countdown {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin: 0 0 18px;
+
+		span {
+			display: grid;
+			min-width: 74px;
+			padding: 9px 12px;
+			border: 1px solid rgba(243, 173, 22, 0.28);
+			border-radius: 7px;
+			background: rgba(255, 255, 255, 0.6);
+			color: var(--color-muted);
+			font-size: 0.66rem;
+			font-weight: 800;
+			line-height: 1.1;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		strong {
+			color: var(--color-forest);
+			font-size: 1.15rem;
+			line-height: 1;
+		}
+	}
+
 	&__details {
 		display: flex;
 		flex-wrap: wrap;

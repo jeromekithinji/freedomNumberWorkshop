@@ -330,7 +330,9 @@ export function RegistrationSection({ fieldOptions }) {
               <p>
                 We look forward to seeing you on
                 {' '}
-                <strong>Thursday, 12 November 2026 at 7:00 PM EAT.</strong>
+                <strong>
+                  Thursday, 12 November 2026 at 9am 🇳🇬 / 11am EAT 🇰🇪.
+                </strong>
               </p>
 
               <button type="button" onClick={handleCloseSuccess}>

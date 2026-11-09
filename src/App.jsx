@@ -20,6 +20,7 @@ import {
 } from './components/WorkshopTimelineSection/WorkshopTimelineSection'
 import {
   audienceContent,
+  countdownLabels,
   ctaContent,
   discoveryContent,
   facilitatorContent,
@@ -32,11 +33,15 @@ import {
   participantResourcesContent,
   pricingContent,
   registrationFields,
+  workshopDate,
   workshopTimelineContent,
 } from './data/project-data'
+import { useCountdown } from './hooks/use-countdown'
 import './App.css'
 
 function App() {
+  const countdown = useCountdown(workshopDate)
+
   function handleOpenRegistration() {
     document
       .getElementById('registration-section')
@@ -48,6 +53,8 @@ function App() {
       <main>
         <HeroSection
           content={heroContent}
+          countdown={countdown}
+          countdownLabels={countdownLabels}
           onRegister={handleOpenRegistration}
         />
         <FeatureSection content={featureContent} />
