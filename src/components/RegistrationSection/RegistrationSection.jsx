@@ -331,7 +331,7 @@ export function RegistrationSection({ fieldOptions }) {
                 We look forward to seeing you on
                 {' '}
                 <strong>
-                  Thursday, 12 November 2026 at 9am (GMT+1) 🇳🇬 / 11am
+                  Saturday, 21 November 2026 at 8am (GMT+1) 🇳🇬 / 10am
                   {' '}
                   (EAT) 🇰🇪.
                 </strong>
